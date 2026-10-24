@@ -1,0 +1,22 @@
+[package]
+name = "kernels-rvv"
+description = "VLA RVV 1.0 compute kernels with portable scalar fallbacks for the SpacemiT K3 platform"
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.85"
+license = "AGPL-3.0-only"
+repository = "https://github.com/LMA1980/k3-kernels-rvv"
+
+[lints.rust]
+unsafe_op_in_unsafe_fn = "deny"
+missing_debug_implementations = "warn"
+unreachable_pub = "warn"
+unused_qualifications = "warn"
+
+[lints.clippy]
+all = { level = "warn", priority = -1 }
+pedantic = { level = "warn", priority = -1 }
+undocumented_unsafe_blocks = "warn"
+
+[dependencies]
+k3-core = { workspace = true }
